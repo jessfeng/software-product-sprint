@@ -13,16 +13,20 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random quote to the page.
  */
-function addRandomGreeting() {
+function addRandomQuote() {
   const greetings =
       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  
+  const quotes =
+      ['adventure awaits', 'trust the timing of your life', 'walk at your own pace; there\'s no need to rush', 'grow through what you go through',
+      'when winter passes, spring always comes', 'remember why you started', 'love more than yesterday but less than tomorrow'];
+  
+  // Pick a random quote.
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const quoteContainer = document.getElementById('greeting-container');
+  quoteContainer.innerText = quote;
 }

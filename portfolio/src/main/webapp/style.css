@@ -7,3 +7,21 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+h1 {
+    color: #5f9ea0
+}
+
+h2 {
+    color: #a0615f
+}
+
+.photo {
+    width: 50%;
+    height: auto;
+}
+
+.blog{
+    width: 100px;
+    height: auto;
+}

@@ -25,13 +25,9 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-    
+    static ArrayList<String> messages = new ArrayList<String>();
 //   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    ArrayList<String> messages = new ArrayList<String>();
-    messages.add("Hello!");
-    messages.add("Welcome!");
-    messages.add("Have a nice day!");
     String json = "{";
     for (String msg: messages){
         json += msg + ", ";
@@ -45,9 +41,9 @@ public class DataServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the input from the form.
     String text = request.getParameter("comment");
+    messages.add(text);
      // Respond with the result.
-    String[] comments = text.split("\\s*,\\s*");
     response.setContentType("text/html;");
-    response.getWriter().println(Arrays.toString(comments));
+    response.getWriter().println(messages);
   }
 }

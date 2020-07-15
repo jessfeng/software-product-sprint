@@ -30,3 +30,20 @@ function addRandomQuote() {
   const quoteContainer = document.getElementById('greeting-container');
   quoteContainer.innerText = quote;
 }
+
+/**
+ * Fetches message from server and adds to DOM
+ */
+ async function sayHello(){
+     // Fetch greeting
+    const response = await fetch('/data');
+    console.log('Fetching data...');
+    // Handle response
+    const quote = await response.text();
+    console.log('Handling response...');
+
+    // Add it to the page
+    document.getElementById('greeting-container').innerText = quote;
+    console.log('Done!');
+
+ }

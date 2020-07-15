@@ -59,11 +59,20 @@
     <h2>A hidden talent</h2>
     <image src="/images/chopsticks.png" class="blog"/>
     <p>I have never lost at a game of 'chopsticks', the finger game.
-        I welcome you to be the next challenger! Would you join me? </p>
+        I welcome you to be the next challenger! Would you join me? 
+    </p>
     
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomQuote()">"Hello world"</button>
-      <div id="greeting-container"></div>
+    <p>Click here to get a random message:</p>
+    <button onclick="addRandomQuote()">"Hello world"</button>
+    <div id="greeting-container"></div>
+
+    <form action="/data" method="POST">
+      <p>Please leave comments, if you'd like! (separated by commas):</p>
+      <textarea name="comment"></textarea>
+      <br/><br/>
+      <input type="submit" />
+    </form>
+
     </div>
   </body>
 </html>

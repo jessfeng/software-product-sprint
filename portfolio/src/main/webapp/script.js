@@ -35,15 +35,18 @@ function addRandomQuote() {
  * Fetches message from server and adds to DOM
  */
  async function sayHello(){
-     // Fetch greeting
+     // Fetch comments
     const response = await fetch('/data');
     console.log('Fetching data...');
     // Handle response
-    const quote = await response.text();
+    const comments = await response.text();
     console.log('Handling response...');
 
     // Add it to the page
-    document.getElementById('greeting-container').innerText = quote;
+    document.getElementById('greeting-container').innerText = comments;
     console.log('Done!');
+    console.log(comments);
 
  }
+
+

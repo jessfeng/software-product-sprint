@@ -34,7 +34,7 @@ function addRandomQuote() {
 /**
  * Fetches message from server and adds to DOM
  */
- async function sayHello(){
+ async function getFromServer(){
      // Fetch comments
     const response = await fetch('/data');
     console.log('Fetching data...');

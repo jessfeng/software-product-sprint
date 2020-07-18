@@ -16,6 +16,24 @@ h2 {
     color: #a0615f
 }
 
+/* form */
+
+form {
+    display:table;
+}
+
+p {
+    display: table-row;
+}
+
+label {
+    display: table-cell;
+}
+
+input {
+    display: table-cell;
+}
+
 .photo {
     width: 50%;
     height: auto;
@@ -24,4 +42,8 @@ h2 {
 .blog{
     width: 100px;
     height: auto;
+}
+
+.form-field{
+    vertical-align: middle;
 }
